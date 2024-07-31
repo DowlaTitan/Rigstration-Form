@@ -20,23 +20,38 @@
     <module>webapp</module>
   </modules>
 
-  <distributionManagement>
-   <repository>
-            <id>deployment</id>
-            <name>Internal Releases</name>
-            <url>http://192.168.106.178:8081/repository/Cloud1/</url>
-        </repository>
-        <snapshotRepository>
-            <id>deployment</id>
-            <name>Internal Snapshot Releases</name>
-            <url>http://192.168.106.178:8081/repository/Gen1/</url>
-        </snapshotRepository>
-    <site>
-      <id>site-server</id>
-      <name>Test Project Site</name>
-      <url>file:///tmp/maven-project-site</url>
-    </site>
-  </distributionManagement>
+<build>
+  <plugins>
+    <plugin>
+      <groupId>org.wildfly.plugins</groupId>
+      <artifactId>wildfly-maven-plugin</artifactId>
+      <version>24.0.1</version> <!-- Check for the latest version -->
+      <configuration>
+        <hostname>192.168.106.199</hostname>
+        <port>9990</port>
+        <username>jboss</username>
+        <password>admin</password>
+      </configuration>
+      <executions>
+        <execution>
+          <id>start</id>
+          <phase>pre-integration-test</phase>
+          <goals>
+            <goal>start</goal>
+          </goals>
+        </execution>
+        <execution>
+          <id>stop</id>
+          <phase>post-integration-test</phase>
+          <goals>
+            <goal>stop</goal>
+          </goals>
+        </execution>
+      </executions>
+    </plugin>
+  </plugins>
+</build>
+
 
   <build>
     <plugins>
