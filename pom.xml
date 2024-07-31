@@ -20,23 +20,38 @@
     <module>webapp</module>
   </modules>
 
-  <distributionManagement>
-   <repository>
-            <id>deployment</id>
-            <name>Internal Releases</name>
-            <url>http://192.168.254.155/:8081/repository/Cloud-Gen-Release/</url>
-        </repository>
-        <snapshotRepository>
-            <id>deployment</id>
-            <name>Internal Snapshot Releases</name>
-            <url>http://192.168.254.155:8081/repository/Cloud-Gen-Snap/</url>
-        </snapshotRepository>
-    <site>
-      <id>site-server</id>
-      <name>Test Project Site</name>
-      <url>file:///tmp/maven-project-site</url>
-    </site>
-  </distributionManagement>
+  <build>
+    <plugins>
+      <plugin>
+        <groupId>org.wildfly.plugins</groupId>
+        <artifactId>wildfly-maven-plugin</artifactId>
+        <version>3.0.0.Final</version> <!-- Check for the latest version -->
+        <configuration>
+          <hostname>localhost</hostname> <!-- WildFly hostname -->
+          <port>9990</port> <!-- Management port -->
+          <username>admin</username> <!-- Management username -->
+          <password>admin</password> <!-- Management password -->
+          <deploy>true</deploy> <!-- Whether to deploy or not -->
+        </configuration>
+        <executions>
+          <execution>
+            <id>deploy</id>
+            <phase>deploy</phase>
+            <goals>
+              <goal>deploy</goal>
+            </goals>
+          </execution>
+          <execution>
+            <id>undeploy</id>
+            <phase>clean</phase>
+            <goals>
+              <goal>undeploy</goal>
+            </goals>
+          </execution>
+        </executions>
+      </plugin>
+    </plugins>
+  </build>
 
   <build>
     <plugins>
