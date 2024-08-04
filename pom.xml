@@ -38,7 +38,7 @@
       <url>file:///tmp/maven-project-site</url>
     </site>
   </distributionManagement>
-
+         
   <build>
     <plugins>
       <plugin>
@@ -91,6 +91,37 @@
             </plugin>
           </reportPlugins>
         </configuration>
+      </plugin>
+    </plugins>
+
+    <plugins>
+      <plugin>
+        <groupId>org.wildfly.plugins</groupId>
+        <artifactId>wildfly-maven-plugin</artifactId>
+        <version>24.0.1.Final</version> <!-- Check for the latest version -->
+        <configuration>
+          <hostname>192.168.106.199</hostname> <!-- WildFly hostname -->
+          <port>9990</port> <!-- Management port -->
+          <username>jboss</username> <!-- Management username -->
+          <password>admin</password> <!-- Management password -->
+          <deploy>true</deploy> <!-- Whether to deploy or not -->
+        </configuration>
+        <executions>
+          <execution>
+            <id>deploy</id>
+            <phase>deploy</phase>
+            <goals>
+              <goal>deploy</goal>
+            </goals>
+          </execution>
+          <execution>
+            <id>undeploy</id>
+            <phase>clean</phase>
+            <goals>
+              <goal>undeploy</goal>
+            </goals>
+          </execution>
+        </executions>
       </plugin>
     </plugins>
 
