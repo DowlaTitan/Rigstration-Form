@@ -22,7 +22,7 @@
 <modules>
     <!-- Remove or comment out the lines below if the directories don't exist -->
     <module>server/target</module>
-    <module>server/webapp</module>
+    <module>webapp</module>
 </modules>
 
 
