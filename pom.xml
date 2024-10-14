@@ -16,6 +16,12 @@
   </properties>
 
   <properties>
+    <maven.compiler.source>17</maven.compiler.source>
+    <maven.compiler.target>17</maven.compiler.target>
+    <!-- Add more properties here -->
+  </properties>
+
+  <properties>
     <sonar.host.url>https://sonarcloud.io</sonar.host.url>
   </properties>
 
