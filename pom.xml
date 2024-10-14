@@ -21,10 +21,10 @@
   <!-- Remove if modules are not needed -->
 <modules>
     <!-- Remove or comment out the lines below if the directories don't exist -->
-    <module>server/server</module>
-    <module>server/webapp</module>
+    <module>server/target</module>
+    <module>webapp</module>
 </modules>
-
+         
   <distributionManagement>
     <repository>
       <id>deployment</id>
