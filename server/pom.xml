@@ -19,10 +19,10 @@
   </properties>
 
   <!-- Remove if modules are not needed -->
-  <modules>
-    <module>server</module>
-    <module>webapp</module>
-  </modules>
+<modules>
+  <module>server/server</module>
+  <module>server/webapp</module>
+</modules>
 
   <distributionManagement>
     <repository>
