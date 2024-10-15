@@ -13,9 +13,9 @@
   <properties>
     <project.build.sourceEncoding>utf-8</project.build.sourceEncoding>
     <project.reporting.outputEncoding>utf-8</project.reporting.outputEncoding>
-    <sonar.projectKey>YourProjectKey</sonar.projectKey>
-    <sonar.organization>YourOrganizationName</sonar.organization>
-    <sonar.host.url>https://sonarcloud.io</sonar.host.url>
+    <sonar.projectKey>admin</sonar.projectKey>
+    <sonar.organization>admin</sonar.organization>
+    <sonar.host.url>http://192.168.106.142:9000</sonar.host.url>
   </properties>
 
   <modules>
