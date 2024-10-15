@@ -24,16 +24,16 @@
   </modules>
 
   <distributionManagement>
-   <repository>
-            <id>deployment</id>
-            <name>Internal Releases</name>
-            <url>http://192.168.254.155:8081/repository/Cloud-Gen-Release/</url>
-        </repository>
-        <snapshotRepository>
-            <id>deployment</id>
-            <name>Internal Snapshot Releases</name>
-            <url>http://192.168.254.155:8081/repository/Cloud-Gen-Snap/</url>
-        </snapshotRepository>
+    <repository>
+      <id>deployment</id>
+      <name>Internal Releases</name>
+      <url>http://192.168.254.155:8081/repository/Cloud-Gen-Release/</url>
+    </repository>
+    <snapshotRepository>
+      <id>deployment</id>
+      <name>Internal Snapshot Releases</name>
+      <url>http://192.168.254.155:8081/repository/Cloud-Gen-Snap/</url>
+    </snapshotRepository>
     <site>
       <id>site-server</id>
       <name>Test Project Site</name>
@@ -65,28 +65,22 @@
             <plugin>
               <artifactId>maven-checkstyle-plugin</artifactId>
             </plugin>
-
             <plugin>
               <artifactId>maven-jxr-plugin</artifactId>
             </plugin>
-
             <plugin>
               <artifactId>maven-javadoc-plugin</artifactId>
             </plugin>
-
             <plugin>
               <artifactId>maven-pmd-plugin</artifactId>
             </plugin>
-
             <plugin>
               <artifactId>maven-surefire-report-plugin</artifactId>
             </plugin>
-
             <plugin>
               <groupId>org.codehaus.mojo</groupId>
               <artifactId>findbugs-maven-plugin</artifactId>
             </plugin>
-
             <plugin>
               <groupId>org.codehaus.mojo</groupId>
               <artifactId>taglist-maven-plugin</artifactId>
@@ -94,137 +88,137 @@
           </reportPlugins>
         </configuration>
       </plugin>
+
+      <pluginManagement>
+        <plugins>
+          <plugin>
+            <artifactId>maven-checkstyle-plugin</artifactId>
+            <version>2.8</version>
+          </plugin>
+
+          <plugin>
+            <groupId>org.apache.maven.plugins</groupId>
+            <artifactId>maven-war-plugin</artifactId>
+            <version>3.3.2</version>
+            <configuration>
+              <failOnMissingWebXml>false</failOnMissingWebXml>
+            </configuration>
+          </plugin>
+
+          <plugin>
+            <artifactId>maven-compiler-plugin</artifactId>
+            <version>2.3.2</version>
+          </plugin>
+
+          <plugin>
+            <artifactId>maven-javadoc-plugin</artifactId>
+            <version>2.8</version>
+          </plugin>
+
+          <plugin>
+            <artifactId>maven-jxr-plugin</artifactId>
+            <version>2.3</version>
+          </plugin>
+
+          <plugin>
+            <artifactId>maven-pmd-plugin</artifactId>
+            <version>2.6</version>
+          </plugin>
+
+          <plugin>
+            <artifactId>maven-project-info-reports-plugin</artifactId>
+            <version>2.4</version>
+          </plugin>
+
+          <plugin>
+            <artifactId>maven-release-plugin</artifactId>
+            <version>2.2.1</version>
+          </plugin>
+
+          <plugin>
+            <artifactId>maven-resources-plugin</artifactId>
+            <version>2.5</version>
+          </plugin>
+
+          <plugin>
+            <artifactId>maven-site-plugin</artifactId>
+            <version>3.0</version>
+          </plugin>
+
+          <plugin>
+            <artifactId>maven-surefire-report-plugin</artifactId>
+            <version>2.11</version>
+          </plugin>
+
+          <plugin>
+            <artifactId>maven-surefire-plugin</artifactId>
+            <version>2.11</version>
+          </plugin>
+
+          <plugin>
+            <groupId>org.codehaus.mojo</groupId>
+            <artifactId>findbugs-maven-plugin</artifactId>
+            <version>2.3.3</version>
+          </plugin>
+
+          <plugin>
+            <groupId>org.codehaus.mojo</groupId>
+            <artifactId>taglist-maven-plugin</artifactId>
+            <version>2.4</version>
+          </plugin>
+
+          <plugin>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-maven-plugin</artifactId>
+            <version>${project.parent.version}</version>
+          </plugin>
+
+          <plugin>
+            <groupId>org.apache.maven.plugins</groupId>
+            <artifactId>maven-compiler-plugin</artifactId>
+            <configuration>
+              <source>10</source>
+              <target>10</target>
+            </configuration>
+          </plugin>
+
+          <plugin>
+            <groupId>org.jacoco</groupId>
+            <artifactId>jacoco-maven-plugin</artifactId>
+            <version>0.8.7</version>
+            <executions>
+              <execution>
+                <goals>
+                  <goal>prepare-agent</goal>
+                </goals>
+              </execution>
+              <execution>
+                <id>report</id>
+                <phase>test</phase>
+                <goals>
+                  <goal>report</goal>
+                </goals>
+              </execution>
+            </executions>
+          </plugin>
+
+          <plugin>
+            <groupId>org.sonarsource.scanner.maven</groupId>
+            <artifactId>sonar-maven-plugin</artifactId>
+            <version>2.16.3.1081</version>
+          </plugin>
+
+          <plugin>
+            <groupId>org.mortbay.jetty</groupId>
+            <artifactId>jetty-maven-plugin</artifactId>
+            <version>8.0.0.M1</version>
+          </plugin>
+        </plugins>
+      </pluginManagement>
     </plugins>
-
-    <pluginManagement>
-      <plugins>
-        <plugin>
-          <artifactId>maven-checkstyle-plugin</artifactId>
-          <version>2.8</version>
-        </plugin>
-    
-        <plugin>
-              <groupId>org.apache.maven.plugins</groupId>
-              <artifactId>maven-war-plugin</artifactId>
-              <version>3.3.2</version>
-              <configuration>
-                     <failOnMissingWebXml>false</failOnMissingWebXml>
-              </configuration>
-        </plugin>
-
-        <plugin>
-          <artifactId>maven-compiler-plugin</artifactId>
-          <version>2.3.2</version>
-        </plugin>
-
-        <plugin>
-          <artifactId>maven-javadoc-plugin</artifactId>
-          <version>2.8</version>
-        </plugin>
-
-        <plugin>
-          <artifactId>maven-jxr-plugin</artifactId>
-          <version>2.3</version>
-        </plugin>
-
-        <plugin>
-          <artifactId>maven-pmd-plugin</artifactId>
-          <version>2.6</version>
-        </plugin>
-
-        <plugin>
-          <artifactId>maven-project-info-reports-plugin</artifactId>
-          <version>2.4</version>
-        </plugin>
-
-        <plugin>
-          <artifactId>maven-release-plugin</artifactId>
-          <version>2.2.1</version>
-        </plugin>
-
-        <plugin>
-          <artifactId>maven-resources-plugin</artifactId>
-          <version>2.5</version>
-        </plugin>
-
-        <plugin>
-          <artifactId>maven-site-plugin</artifactId>
-          <version>3.0</version>
-        </plugin>
-
-        <plugin>
-          <artifactId>maven-surefire-report-plugin</artifactId>
-          <version>2.11</version>
-        </plugin>
-
-        <plugin>
-          <artifactId>maven-surefire-plugin</artifactId>
-          <version>2.11</version>
-        </plugin>
-
-        <plugin>
-          <groupId>org.codehaus.mojo</groupId>
-          <artifactId>findbugs-maven-plugin</artifactId>
-          <version>2.3.3</version>
-        </plugin>
-
-        <plugin>
-          <groupId>org.codehaus.mojo</groupId>
-          <artifactId>taglist-maven-plugin</artifactId>
-          <version>2.4</version>
-        </plugin>
-
-        <plugin>
-	<groupId>org.springframework.boot</groupId>
-	<artifactId>spring-boot-maven-plugin</artifactId>
-	<version>${project.parent.version}</version>
-        </plugin>
-            
-        <plugin>
-         <groupId>org.apache.maven.plugins</groupId>
-         <artifactId>maven-compiler-plugin</artifactId>
-         <configuration>
-          <source>10</source>
-          <target>10</target>
-         </configuration>
-        </plugin>
-	
-        <plugin>
-	<groupId>org.jacoco</groupId>
-	<artifactId>jacoco-maven-plugin</artifactId>
-	<version>0.8.7</version>
-	 <executions>
-	  <execution>
-	   <goals>
-	    <goal>prepare-agent</goal>
-	   </goals>
-	  </execution>
-	  <!-- attached to Maven test phase -->
-           <execution>
-	   <id>report</id>
-	   <phase>test</phase>
-		<goals>
-		 <goal>report</goal>
-		</goals>
-	  </execution>
-          </executions>
-        </plugin>
-               
-	<plugin>
-	  <groupId>org.sonarsource.scanner.maven</groupId>
-	  <artifactId>sonar-maven-plugin</artifactId>
-	  <version>3.9.0</version>
-         </plugin>
-
-        <plugin>
-          <groupId>org.mortbay.jetty</groupId>
-          <artifactId>jetty-maven-plugin</artifactId>
-          <version>8.0.0.M1</version>
-        </plugin>
-      </plugins>
-    </pluginManagement>
   </build>
-    <dependencyManagement>
+
+  <dependencyManagement>
     <dependencies>
       <dependency>
         <groupId>javax.servlet</groupId>
@@ -278,5 +272,4 @@
   <prerequisites>
     <maven>3.0.3</maven>
   </prerequisites>
-
 </project>
