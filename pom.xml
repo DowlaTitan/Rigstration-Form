@@ -13,9 +13,10 @@
   <properties>
     <project.build.sourceEncoding>utf-8</project.build.sourceEncoding>
     <project.reporting.outputEncoding>utf-8</project.reporting.outputEncoding>
-    <sonar.projectKey>sqa_3f010f4565c33a922290dca1ff46c41a8fb36d91</sonar.projectKey>
-    <sonar.organization>admin</sonar.organization>
-    <sonar.host.url>http://192.168.106.142:9000</sonar.host.url>
+    <sonar.projectKey>dowlatitan</sonar.projectKey>
+    <sonar.organization>DowlaTitan</sonar.organization>
+    <sonar.host.url>https://sonarcloud.io</sonar.host.url>
+    <sonar.login>cc101f371876ce37e327f63a68e5d4d568ccd622</sonar.login>
   </properties>
 
   <modules>
