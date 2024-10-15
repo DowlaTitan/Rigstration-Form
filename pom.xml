@@ -13,8 +13,8 @@
   <properties>
     <project.build.sourceEncoding>utf-8</project.build.sourceEncoding>
     <project.reporting.outputEncoding>utf-8</project.reporting.outputEncoding>
-    <sonar.organization>dowlatitan</sonar.organization>
-    <sonar.projectKey>DowlaTitan</sonar.projectKey>
+    <sonar.organization>DowlaTitan</sonar.organization>
+    <sonar.projectKey>dowlatitan</sonar.projectKey>
     <sonar.host.url>https://sonarcloud.io</sonar.host.url>
   </properties>
 
