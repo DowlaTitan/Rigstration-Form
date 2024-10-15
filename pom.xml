@@ -14,9 +14,9 @@
     <project.build.sourceEncoding>utf-8</project.build.sourceEncoding>
     <project.reporting.outputEncoding>utf-8</project.reporting.outputEncoding>
     <sonar.projectKey>dowlatitan</sonar.projectKey>
-    <sonar.organization>DowlaTitan</sonar.organization>
+    <sonar.organization>DowlaTitan</sonar.organization> <!-- Update this line -->
     <sonar.host.url>https://sonarcloud.io</sonar.host.url>
-    <sonar.login>cc101f371876ce37e327f63a68e5d4d568ccd622</sonar.login>
+    <sonar.login>${env.SONAR_TOKEN}</sonar.login>
   </properties>
 
   <modules>
