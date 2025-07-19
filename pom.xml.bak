@@ -174,12 +174,12 @@
         <repository>
             <id>deployment</id>
             <name>Internal Releases</name>
-            <url>http://192.168.10.144:8081/repository/Cloud-Gen-Ravi/</url>
+            <url>http://192.168.159.140:8081/repository/Dowla/</url>
         </repository>
         <snapshotRepository>
             <id>deployment</id>
             <name>Internal Snapshot Releases</name>
-            <url>http://192.168.10.144:8081/repository/Cloud-Gen-Snap/</url>
+            <url>http://192.168.159.140:8081/repository/Titan1/</url>
         </snapshotRepository>
     </distributionManagement>
 
